@@ -1,0 +1,86 @@
+.navbar_container {
+  padding: 10px 10%;
+  color: var(--text);
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav a {
+  margin-right: 40px;
+  font-size: 1.2em;
+  transition-duration: 0.3s;
+  display: inline-block;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent);
+  transform: scale(1.05);
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+.navbar_icons a {
+  margin-right: 20px;
+  font-size: 1.4em;
+  transition-duration: 0.3s;
+  display: inline-block;
+}
+
+.navbar_icons a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.navbar_icons a:last-child {
+  margin-right: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.theme-toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-toggle-checkbox {
+  display: none;
+}
+
+.theme-toggle-label {
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: var(--background);
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-ball {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-ball {
+  transform: translateX(30px);
+}
