@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Navbar } from "./components/navbar";
 import profileImage from "./img/profile_image.png";
+import profilePicture from "./img/profile_picture.png";
 import { skills } from "./consts/skills";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <Navbar />
+
       <div className="profile_container" data-aos="fade-up">
         <div className="profile_text">
           I'm <span className="profile_text_accent">Mateusz Marek</span>
@@ -28,18 +30,49 @@ function App() {
           </a>
         </div>
         <div className="profile_image">
-          <img src={profileImage} alt="Mateusz Marek" />
+          <img src={profilePicture} alt="Mateusz Marek" />
         </div>
       </div>
-      <div className="skills_main_container">
-        <h1 data-aos="fade-up">My Skills</h1>
-        <div className="skills_container">
+
+      <div id="technologies" className="technologies_main_container">
+        <h1 data-aos="fade-up">Technologies</h1>
+        <div className="technologies_container" data-aos="fade-up">
           {skills.map((skill, index) => (
-            <div key={index} className="skill_container" data-aos="fade-up">
+            <div key={index} className="technology_container">
               <img src={skill.image} alt={skill.text} />
-              <p className="skill_text">{skill.text}</p>
+              <p className="technology_text">{skill.text}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div id="projects" className="projects_main_container">
+        <h1 data-aos="fade-up">Projects</h1>
+        <div className="projects_container" data-aos="fade-up">
+          <div className="project_container">
+            <div className="project_container_info">
+              <p className="project_title">Weather app</p>
+              <a href="">View code</a>
+              <a href="">Live version</a>
+            </div>
+            <img src="https://mateuszmarek.netlify.app/images/WeatherAppPreview.png" />
+          </div>
+          <div className="project_container">
+            <div className="project_container_info">
+              <p className="project_title">Weather app</p>
+              <a href="">View code</a>
+              <a href="">Live version</a>
+            </div>
+            <img src="https://mateuszmarek.netlify.app/images/WeatherAppPreview.png" />
+          </div>
+          <div className="project_container">
+            <div className="project_container_info">
+              <p className="project_title">Weather app</p>
+              <a href="">View code</a>
+              <a href="">Live version</a>
+            </div>
+            <img src="https://mateuszmarek.netlify.app/images/WeatherAppPreview.png" />
+          </div>
         </div>
       </div>
     </div>

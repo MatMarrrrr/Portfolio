@@ -19,8 +19,8 @@ export const Navbar = () => {
     <div className="navbar_container">
       <h3>MatMar Portfolio</h3>
       <nav>
-        <a href="#projects">Projects</a>
         <a href="#technologies">Technologies</a>
+        <a href="#projects">Projects</a>
         <a href="#about">About me</a>
       </nav>
       <div className="navbar_icons">
