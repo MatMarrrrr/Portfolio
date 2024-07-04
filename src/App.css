@@ -9,7 +9,7 @@
 }
 
 .profile_text {
-  font-size: 2em;
+  font-size: 2.7em;
 }
 
 .profile_text_accent {
@@ -114,6 +114,7 @@
   transition: transform 0.2s;
   display: flex;
   position: relative;
+  max-height: 270px;
 }
 
 .project_container:hover {
@@ -127,7 +128,7 @@
 }
 
 .project_container img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -160,13 +161,25 @@
   color: var(--accent);
 }
 
+@media (max-width: 1199px) {
+  .projects_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .project_container {
+    max-height: none;
+  }
+}
+
 @media (min-width: 800px) {
   .technologies_container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .projects_container {
-    grid-template-columns: repeat(1, 1fr);
+@media (max-width: 1200px) {
+  .profile_container {
+    justify-content: center;
   }
 }
 

@@ -24,13 +24,25 @@ export const Navbar = () => {
         <a href="#about">About me</a>
       </nav>
       <div className="navbar_icons">
-        <a href="#">
+        <a
+          href="https://www.linkedin.com/in/mateusz-marek-679606236/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-linkedin"></i>
         </a>
-        <a href="#">
-          <i className="fab fa-facebook"></i>
+        <a
+          href="https://github.com/MatMarrrrr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-github"></i>
         </a>
-        <a href="#">
+        <a
+          href="https://www.instagram.com/matmarrrr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-instagram"></i>
         </a>
       </div>
