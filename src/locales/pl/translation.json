@@ -1,0 +1,40 @@
+{
+  "technologies": "Technologie",
+  "projects": "Projekty",
+  "aboutMe": "O mnie",
+  "contact": "Kontakt",
+  "iam": "Jestem",
+  "contactMe": "Skontaktuj się ze mną",
+  "aboutMeContent": "Witam, jestem Mateusz Marek, Fullstack Web Developer z solidnymi podstawami w nowoczesnych technologiach internetowych. Lubię tworzyć dynamiczne i responsywne aplikacje internetowe, które zapewniają bezproblemową obsługę użytkownika. Z silnym zamiłowaniem zarówno do frontend, jak i backend developmentu, jestem zawsze chętny do eksplorowania i nauki nowych technologii. Moim celem jest tworzenie efektywnych, skalowalnych i przyjaznych użytkownikowi aplikacji, które spełniają i przewyższają oczekiwania.",
+  "viewCode": "Zobacz kod",
+  "liveVersion": "Wersja live",
+  "download": "Pobierz",
+  "experience": "Doświadczenie",
+  "experiences": [
+    {
+      "company": "Paidwork",
+      "position": "CTO/Fullstack Web Developer",
+      "duration": "Cze 2023 - Obecnie"
+    },
+    {
+      "company": "Misty Bytes",
+      "position": "Game Developer",
+      "duration": "Lis 2022 - Paź 2023"
+    },
+    {
+      "company": "BestPoints",
+      "position": "App Developer Support",
+      "duration": "Gru 2021 - Mar 2022"
+    },
+    {
+      "company": "RS-ONLINE",
+      "position": "Serwisant Praktykant",
+      "duration": "Gru 2019 - Kwi 2020"
+    },
+    {
+      "company": "FOXKOMPUTER",
+      "position": "Serwisant Praktykant",
+      "duration": "Paź 2019 - Lis 2019"
+    }
+  ]
+}

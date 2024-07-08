@@ -10,6 +10,7 @@
   top: 0;
   z-index: 1000;
 }
+
 nav a {
   margin-right: 40px;
   font-size: 1.2em;
@@ -83,4 +84,9 @@ a {
 
 .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-ball {
   transform: translateX(30px);
+}
+
+.language-select-container {
+  margin-left: 20px;
+  width: 120px;
 }

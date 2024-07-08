@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import Select from "react-select";
 import "../style/navbar.css";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     document.documentElement.setAttribute(
@@ -15,13 +18,50 @@ export const Navbar = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  const handleLanguageChange = (selectedOption) => {
+    i18n.changeLanguage(selectedOption.value);
+  };
+
+  const languageOptions = [
+    { value: "en", label: "English" },
+    { value: "pl", label: "Polski" },
+  ];
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      backgroundColor: "var(--primary)",
+      border: "none",
+      color: "#fff",
+    }),
+    singleValue: (provided) => ({
+      ...provided,
+      color: "#fff",
+    }),
+    menu: (provided) => ({
+      ...provided,
+      backgroundColor: "var(--primary)",
+      color: "#fff",
+      borderRadius: 0,
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isFocused
+        ? "rgba(255, 255, 255, 0.1)"
+        : "var(--primary)",
+      color: state.isSelected ? "var(--accent)" : "#fff",
+      borderRadius: 0,
+    }),
+  };
+
   return (
     <div className="navbar_container">
       <h3>MatMar Portfolio</h3>
       <nav>
-        <a href="#technologies">Technologies</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About me</a>
+        <a href="#technologies">{t("technologies")}</a>
+        <a href="#projects">{t("projects")}</a>
+        <a href="#about">{t("aboutMe")}</a>
+        <a href="#contact">{t("contact")}</a>
       </nav>
       <div className="navbar_icons">
         <a
@@ -55,9 +95,23 @@ export const Navbar = () => {
           checked={isDarkMode}
           onChange={handleThemeToggle}
         />
-        <label for="theme-toggle" className="theme-toggle-label">
+        <label htmlFor="theme-toggle" className="theme-toggle-label">
           <span className="theme-toggle-ball"></span>
         </label>
+      </div>
+
+      <div className="language-select-container">
+        <Select
+          defaultValue={languageOptions.find(
+            (option) => option.value === i18n.language
+          )}
+          onChange={handleLanguageChange}
+          options={languageOptions}
+          styles={customStyles}
+          className="language-select"
+          classNamePrefix="react-select"
+          isSearchable={false}
+        />
       </div>
     </div>
   );

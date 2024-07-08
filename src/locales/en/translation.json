@@ -1,0 +1,40 @@
+{
+  "technologies": "Technologies",
+  "projects": "Projects",
+  "aboutMe": "About Me",
+  "contact": "Contact",
+  "iam": "I'm",
+  "contactMe": "Contact Me",
+  "aboutMeContent": "Hi, I'm Mateusz Marek, a dedicated Fullstack Web Developer with a solid foundation in modern web technologies. I enjoy creating dynamic and responsive web applications that provide a seamless user experience. With a strong affinity for both frontend and backend development, I am always eager to explore and learn new technologies. My goal is to build efficient, scalable, and user-friendly applications that meet and exceed expectations.",
+  "viewCode": "View Code",
+  "liveVersion": "Live Version",
+  "download": "Download",
+  "experience": "Experience",
+  "experiences": [
+    {
+      "company": "Paidwork",
+      "position": "CTO/Fullstack Web Developer",
+      "duration": "Jun 2023 - Present"
+    },
+    {
+      "company": "Misty Bytes",
+      "position": "Game Developer",
+      "duration": "Nov 2022 - Oct 2023"
+    },
+    {
+      "company": "BestPoints",
+      "position": "App Developer Support",
+      "duration": "Dec 2021 - Mar 2022"
+    },
+    {
+      "company": "RS-ONLINE",
+      "position": "Service Technician Intern",
+      "duration": "Dec 2019 - Apr 2020"
+    },
+    {
+      "company": "FOXKOMPUTER",
+      "position": "Service Technician Intern",
+      "duration": "Oct 2019 - Nov 2019"
+    }
+  ]
+}
