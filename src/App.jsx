@@ -10,10 +10,19 @@ import { useTranslation } from "react-i18next";
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    const timeoutId = setTimeout(() => {
+      const loaderContainer = document.getElementById("loader-container");
+      if (loaderContainer) {
+        loaderContainer.style.display = "none";
+        document.body.style.overflowY = "auto";
+      }
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, 1000);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   const { t } = useTranslation();

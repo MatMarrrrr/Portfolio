@@ -24,6 +24,7 @@ body {
   font-family: Poppins;
   background: var(--background);
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 [data-aos="fade-up"] {

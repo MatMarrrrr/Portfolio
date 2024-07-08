@@ -1,12 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/code.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MatMar portfolio</title>
+    <style>
+      .loader-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2c2c2c;
+        z-index: 9999;
+      }
+      .loader {
+        display: inline-block;
+        align-items: center;
+        justify-content: space-around;
+        width: 80px;
+        height: 20px;
+      }
+
+      .loader div {
+        margin-left: 5px;
+        width: 15px;
+        height: 15px;
+        background-color: #f3ba2f;
+        border-radius: 50%;
+        display: inline-block;
+        animation: loader-3-bounce 1.4s infinite ease-in-out both;
+      }
+
+      .loader div:nth-child(1) {
+        animation-delay: -0.32s;
+      }
+      .loader div:nth-child(2) {
+        animation-delay: -0.16s;
+      }
+
+      @keyframes loader-3-bounce {
+        0%,
+        80%,
+        100% {
+          transform: scale(0);
+        }
+        40% {
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="loader-container" class="loader-container">
+      <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
