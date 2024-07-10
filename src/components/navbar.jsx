@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -57,11 +58,44 @@ export const Navbar = () => {
   return (
     <div className="navbar_container">
       <h3>MatMar Portfolio</h3>
-      <nav>
-        <a href="#technologies">{t("technologies")}</a>
-        <a href="#projects">{t("projects")}</a>
-        <a href="#about">{t("aboutMe")}</a>
-        <a href="#contact">{t("contact")}</a>
+      <nav className={isMenuOpen ? "nav_open" : ""}>
+        <a href="#technologies" onClick={() => setIsMenuOpen(false)}>
+          {t("technologies")}
+        </a>
+        <a href="#projects" onClick={() => setIsMenuOpen(false)}>
+          {t("projects")}
+        </a>
+        <a href="#about" onClick={() => setIsMenuOpen(false)}>
+          {t("aboutMe")}
+        </a>
+        <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+          {t("contact")}
+        </a>
+        <div className="language-select-container">
+          <Select
+            defaultValue={languageOptions.find(
+              (option) => option.value === i18n.language
+            )}
+            onChange={handleLanguageChange}
+            options={languageOptions}
+            styles={customStyles}
+            className="language-select"
+            classNamePrefix="react-select"
+            isSearchable={false}
+          />
+        </div>
+        <div className="theme-toggle-container-mobile">
+          <input
+            type="checkbox"
+            id="theme-toggle-mobile"
+            className="theme-toggle-checkbox"
+            checked={isDarkMode}
+            onChange={handleThemeToggle}
+          />
+          <label htmlFor="theme-toggle-mobile" className="theme-toggle-label">
+            <span className="theme-toggle-ball"></span>
+          </label>
+        </div>
       </nav>
       <div className="navbar_icons">
         <a
@@ -100,18 +134,15 @@ export const Navbar = () => {
         </label>
       </div>
 
-      <div className="language-select-container">
-        <Select
-          defaultValue={languageOptions.find(
-            (option) => option.value === i18n.language
-          )}
-          onChange={handleLanguageChange}
-          options={languageOptions}
-          styles={customStyles}
-          className="language-select"
-          classNamePrefix="react-select"
-          isSearchable={false}
-        />
+      <div
+        className="burger-menu-container"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <div className={isMenuOpen ? "burger-menu open" : "burger-menu"}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
   );
