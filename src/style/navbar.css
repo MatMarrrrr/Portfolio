@@ -209,8 +209,13 @@ a {
 @media (max-width: 700px) {
   .technologies_main_container,
   .projects_main_container,
-  .profile_container {
+  .profile_container,
+  .contact_me_main_container {
     padding: 0px 30px;
+  }
+
+  .contact_me_item span{
+    font-size: 1em;
   }
 }
 
