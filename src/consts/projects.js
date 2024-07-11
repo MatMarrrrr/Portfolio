@@ -4,20 +4,28 @@ import weatherAppPreview from "../img/weatherAppPreview.png";
 import recipeAppPreview from "../img/recipeAppPreview.png";
 import socialMediaAppPreview from "../img/socialMediaAppPreview.png";
 import geneticFunctionOptimizerAppPreview from "../img/geneticFunctionOptimizerAppPreview.png";
+import tcpTicTacToePreview from "../img/tcpTicTacToePreview.png";
 
 export const projects = [
   {
-    name: "Todo App",
-    image: todoAppPreview,
-    live: "https://todoapp-mm.netlify.app",
-    url: "https://github.com/MatMarrrrr/Todo-App",
-    type: "website",
+    name: "Genetic Function Optimizer App",
+    image: geneticFunctionOptimizerAppPreview,
+    live: "https://drive.google.com/file/d/1Iz86YcCjHcTjXbwxc_9QsHDGEEWST_0i/view?usp=sharing",
+    url: "https://github.com/MatMarrrrr/Genetic-Function-Optimizer-App",
+    type: "exe",
   },
   {
-    name: "TicTacToe App",
-    image: ticTacToePreview,
-    live: "https://tictactoe-mm.netlify.app",
-    url: "https://github.com/MatMarrrrr/Tic-Tac-Toe",
+    name: "Tcp TicTacToe",
+    image: tcpTicTacToePreview,
+    live: "https://drive.google.com/file/d/1ZEXs84Nrg5gnWQRSAxMslEMFp7BHmiDx/view?usp=sharing",
+    url: "https://github.com/MatMarrrrr/TCP-Tic-Tac-Toe",
+    type: "exe",
+  },
+  {
+    name: "Social Media App",
+    image: socialMediaAppPreview,
+    live: "https://socialmediaapp-mm.netlify.app",
+    url: "https://github.com/MatMarrrrr/Social-Media-App",
     type: "website",
   },
   {
@@ -34,18 +42,19 @@ export const projects = [
     url: "https://github.com/MatMarrrrr/Recipe-App",
     type: "website",
   },
+
   {
-    name: "Social Media App",
-    image: socialMediaAppPreview,
-    live: "https://socialmediaapp-mm.netlify.app",
-    url: "https://github.com/MatMarrrrr/Social-Media-App",
+    name: "Todo App",
+    image: todoAppPreview,
+    live: "https://todoapp-mm.netlify.app",
+    url: "https://github.com/MatMarrrrr/Todo-App",
     type: "website",
   },
   {
-    name: "Genetic Function Optimizer App",
-    image: geneticFunctionOptimizerAppPreview,
-    live: "https://drive.google.com/file/d/1Iz86YcCjHcTjXbwxc_9QsHDGEEWST_0i/view?usp=sharing",
-    url: "https://github.com/MatMarrrrr/Genetic-Function-Optimizer-App",
-    type: "exe",
+    name: "TicTacToe App",
+    image: ticTacToePreview,
+    live: "https://tictactoe-mm.netlify.app",
+    url: "https://github.com/MatMarrrrr/Tic-Tac-Toe",
+    type: "website",
   },
 ];
