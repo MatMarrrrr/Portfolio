@@ -5,6 +5,7 @@ import recipeAppPreview from "../img/recipeAppPreview.png";
 import socialMediaAppPreview from "../img/socialMediaAppPreview.png";
 import geneticFunctionOptimizerAppPreview from "../img/geneticFunctionOptimizerAppPreview.png";
 import tcpTicTacToePreview from "../img/tcpTicTacToePreview.png";
+import imgeManipulationAppPreview from "../img/imgeManipulationAppPreview.png";
 
 export const projects = [
   {
@@ -12,6 +13,13 @@ export const projects = [
     image: geneticFunctionOptimizerAppPreview,
     live: "https://drive.google.com/file/d/1Iz86YcCjHcTjXbwxc_9QsHDGEEWST_0i/view?usp=sharing",
     url: "https://github.com/MatMarrrrr/Genetic-Function-Optimizer-App",
+    type: "exe",
+  },
+  {
+    name: "Image Manipulation App",
+    image: imgeManipulationAppPreview,
+    live: "https://drive.google.com/file/d/1nzZPrStvkOiiRcJ9cyDm7MCA45kJGukR/view?usp=sharing",
+    url: "https://github.com/MatMarrrrr/Image-Manipulation-App",
     type: "exe",
   },
   {
