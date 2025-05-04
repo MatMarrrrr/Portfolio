@@ -12,9 +12,19 @@
   "experience": "Doświadczenie",
   "experiences": [
     {
+      "company": "Freelance",
+      "position": "Web developer",
+      "duration": "Luty 2025 - Obecnie"
+    },
+    {
+      "company": "Cinkciarz.pl",
+      "position": "Junior Software Developer",
+      "duration": "Paź 2024 - Luty 2025"
+    },
+    {
       "company": "Paidwork",
       "position": "CTO/Fullstack Web Developer",
-      "duration": "Cze 2023 - Obecnie"
+      "duration": "Mar 2022 - Paź 2024"
     },
     {
       "company": "Misty Bytes",
