@@ -12,7 +12,7 @@ export const skills = [
     text: "JavaScript",
   },
   {
-    image:      
+    image:
       "https://static-00.iconduck.com/assets.00/typescript-plain-icon-256x256-ypojgpyj.png",
     text: "TypeScript",
   },
@@ -42,6 +42,10 @@ export const skills = [
     text: "Java",
   },
   {
+    image: "https://static-00.iconduck.com/assets.00/file-type-mysql-icon-512x504-otlvcwde.png",
+    text: "MySQL "
+  },
+  {
     image: "https://static-00.iconduck.com/assets.00/git-icon-512x512-61zfmvxk.png",
     text: "Git",
   },
@@ -52,5 +56,5 @@ export const skills = [
   {
     image: "https://static-00.iconduck.com/assets.00/linux-icon-439x512-rnhe78x0.png",
     text: "Linux",
-  }
+  },
 ];
