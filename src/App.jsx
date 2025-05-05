@@ -73,9 +73,8 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {project.type === "website"
-                    ? t("liveVersion")
-                    : t("download")}
+                  {project.type === "website" && t("liveVersion")}
+                  {project.type === "exe" && t("download")}
                 </a>
               </div>
               <img src={project.image} />
