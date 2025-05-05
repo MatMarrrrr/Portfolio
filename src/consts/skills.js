@@ -48,5 +48,9 @@ export const skills = [
   {
     image: "https://static-00.iconduck.com/assets.00/google-cloud-icon-512x412-8rnz6wkz.png",
     text: "Google Cloud",
+  },
+  {
+    image: "https://static-00.iconduck.com/assets.00/linux-icon-439x512-rnhe78x0.png",
+    text: "Linux",
   }
 ];
