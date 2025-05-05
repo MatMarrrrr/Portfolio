@@ -12,7 +12,7 @@ export const skills = [
     text: "JavaScript",
   },
   {
-    image:
+    image:      
       "https://static-00.iconduck.com/assets.00/typescript-plain-icon-256x256-ypojgpyj.png",
     text: "TypeScript",
   },
@@ -30,7 +30,23 @@ export const skills = [
     text: "Laravel",
   },
   {
+    image: "https://static-00.iconduck.com/assets.00/symfony-icon-512x512-94lugehx.png",
+    text: "Symfony",
+  },
+  {
     image: "https://cdn-icons-png.flaticon.com/512/6132/6132221.png",
     text: "C#",
   },
+  {
+    image: "https://static-00.iconduck.com/assets.00/java-icon-378x512-w60vlu77.png",
+    text: "Java",
+  },
+  {
+    image: "https://static-00.iconduck.com/assets.00/git-icon-512x512-61zfmvxk.png",
+    text: "Git",
+  },
+  {
+    image: "https://static-00.iconduck.com/assets.00/google-cloud-icon-512x412-8rnz6wkz.png",
+    text: "Google Cloud",
+  }
 ];
