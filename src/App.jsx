@@ -46,6 +46,17 @@ function App() {
         </div>
       </div>
 
+      <div id="experience" className="experience_main_container">
+        <h1 data-aos="fade-up">{t("experience")}</h1>
+        <ul data-aos="fade-up">
+          {t("experiences", { returnObjects: true }).map((item, index) => (
+            <li key={index}>
+              <span>{item.company}</span> — {item.position} ({item.duration})
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <div id="technologies" className="technologies_main_container">
         <h1 data-aos="fade-up">{t("technologies")}</h1>
         <div className="technologies_container" data-aos="fade-up">
@@ -88,17 +99,6 @@ function App() {
         <div className="about_me_container" data-aos="fade-up">
           <div className="about_me_text">
             <p>{t("aboutMeContent")}</p>
-          </div>
-          <div className="experience_container">
-            <h2>{t("experience")}</h2>
-            <ul>
-              {t("experiences", { returnObjects: true }).map((item, index) => (
-                <li key={index}>
-                  <span>{item.company}</span> - {item.position} ({item.duration}
-                  )
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>

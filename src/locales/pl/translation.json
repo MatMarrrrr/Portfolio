@@ -12,9 +12,14 @@
   "experience": "Doświadczenie",
   "experiences": [
     {
-      "company": "Samozatrudnienie",
+      "company": "Freelancing",
       "position": "Freelance Web developer",
       "duration": "Luty 2025 - Obecnie"
+    },
+    {
+      "company": "CargoKing",
+      "position": "Fullstack Web Developer",
+      "duration": "Cze 2025 - Paź 2025"
     },
     {
       "company": "Cinkciarz.pl",

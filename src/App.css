@@ -187,6 +187,43 @@
   font-size: 1.2em;
 }
 
+.experience_main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text);
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.experience_main_container h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.experience_main_container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience_main_container li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.experience_main_container span {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .experience_main_container {
+    padding: 0px 30px;
+  }
+}
+
 .experience_container {
   text-align: left;
 }
