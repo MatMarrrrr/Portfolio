@@ -8,17 +8,26 @@ import tcpTicTacToePreview from "../img/tcpTicTacToePreview.png";
 import imgeManipulationAppPreview from "../img/imgeManipulationAppPreview.png";
 import flexRentFrontendPreview from "../img/flexRentFrontendPreview.png";
 import flexRentBackendPreview from "../img/flexRentBackendPreview.png";
+import gotsforhorsesPreview from "../img/gotsforhorsesPreview.png";
 
 export const projects = [
+  {
+    name: "Got's For Horses",
+    image: gotsforhorsesPreview,
+    live: "https://gotsforhorses.pl/",
+    type: "website",
+  },
   {
     name: "Flex Rent Backend",
     image: flexRentBackendPreview,
     url: "https://github.com/MatMarrrrr/Flex-Rent-Backend",
+    type: "website",
   },
   {
     name: "Flex Rent Frontend",
     image: flexRentFrontendPreview,
     url: "https://github.com/MatMarrrrr/Flex-Rent-Frontend",
+    type: "website",
   },
   {
     name: "Genetic Function Optimizer App",

@@ -76,17 +76,17 @@ function App() {
             <div className="project_container" key={index}>
               <div className="project_container_info">
                 <p className="project_title">{project.name}</p>
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer">
                   {t("viewCode")}
-                </a>
-                <a
+                </a>}
+                {project.live && <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {project.type === "website" && t("liveVersion")}
                   {project.type === "exe" && t("download")}
-                </a>
+                </a>}
               </div>
               <img src={project.image} />
             </div>
