@@ -12,6 +12,11 @@
   "experience": "Doświadczenie",
   "experiences": [
     {
+      "company": "Netcompany",
+      "position": ".Net Developer",
+      "duration": "Gru 2025 - Obecnie"
+    },
+    {
       "company": "Freelancing",
       "position": "Freelance Web developer",
       "duration": "Luty 2025 - Obecnie"

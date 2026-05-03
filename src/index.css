@@ -1,17 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 :root[data-theme="light"] {
-  --text: #0c0d0e;
-  --background: #f0f1f5;
-  --primary: #2d415d;
-  --secondary: #83a4d2;
-  --accent: #3673c9;
+  --text: #233040;
+  --heading: #0c1320;
+  --muted: #58677a;
+  --background: #f6f7fb;
+  --background-soft: #eef2f7;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-muted: #e9eef5;
+  --surface-strong: #ffffff;
+  --primary: #102033;
+  --secondary: #74a6a0;
+  --accent: #1f7a6f;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(31, 122, 111, 0.14);
+  --accent-shadow: rgba(31, 122, 111, 0.22);
+  --border: rgba(16, 32, 51, 0.12);
+  --shadow: rgba(16, 32, 51, 0.22);
+  --soft-shadow: rgba(16, 32, 51, 0.08);
+  --glow: rgba(116, 166, 160, 0.2);
+  --focus: rgba(31, 122, 111, 0.42);
 }
 :root[data-theme="dark"] {
-  --text: #f1f2f3;
-  --background: #222429;
-  --primary: #2c2c2c;
-  --secondary: #2d4e7c;
+  --text: #d9e1e8;
+  --heading: #ffffff;
+  --muted: #93a2ae;
+  --background: #12151a;
+  --background-soft: #171d24;
+  --surface: rgba(26, 31, 38, 0.88);
+  --surface-muted: #171d24;
+  --surface-strong: #202833;
+  --primary: #10151c;
+  --secondary: #315b62;
   --accent: #f3ba2f;
+  --accent-contrast: #111418;
+  --accent-soft: rgba(243, 186, 47, 0.14);
+  --accent-shadow: rgba(243, 186, 47, 0.22);
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: rgba(0, 0, 0, 0.38);
+  --soft-shadow: rgba(0, 0, 0, 0.18);
+  --glow: rgba(49, 91, 98, 0.35);
+  --focus: rgba(243, 186, 47, 0.44);
 }
 
 html {
@@ -21,10 +49,18 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Poppins;
+  font-family: Poppins, Arial, sans-serif;
   background: var(--background);
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
 }
 
 [data-aos="fade-up"] {

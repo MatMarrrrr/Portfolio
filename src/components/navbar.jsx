@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Select from "react-select";
 import "../style/navbar.css";
 import { useTranslation } from "react-i18next";
@@ -16,7 +16,7 @@ export const Navbar = () => {
   }, [isDarkMode]);
 
   const handleThemeToggle = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((currentMode) => !currentMode);
   };
 
   const handleLanguageChange = (selectedOption) => {
@@ -31,34 +31,42 @@ export const Navbar = () => {
   const customStyles = {
     control: (provided) => ({
       ...provided,
-      backgroundColor: "var(--primary)",
-      border: "none",
-      color: "#fff",
+      minHeight: "42px",
+      backgroundColor: "var(--surface-strong)",
+      border: "1px solid var(--border)",
+      borderRadius: "8px",
+      boxShadow: "none",
+      color: "var(--text)",
     }),
     singleValue: (provided) => ({
       ...provided,
-      color: "#fff",
+      color: "var(--text)",
     }),
     menu: (provided) => ({
       ...provided,
-      backgroundColor: "var(--primary)",
-      color: "#fff",
-      borderRadius: 0,
+      backgroundColor: "var(--surface-strong)",
+      border: "1px solid var(--border)",
+      borderRadius: "8px",
+      overflow: "hidden",
     }),
     option: (provided, state) => ({
       ...provided,
       backgroundColor: state.isFocused
-        ? "rgba(255, 255, 255, 0.1)"
-        : "var(--primary)",
-      color: state.isSelected ? "var(--accent)" : "#fff",
-      borderRadius: 0,
+        ? "var(--accent-soft)"
+        : "var(--surface-strong)",
+      color: state.isSelected ? "var(--accent)" : "var(--text)",
     }),
   };
 
   return (
-    <div className="navbar_container">
-      <h3>MatMar Portfolio</h3>
-      <nav className={isMenuOpen ? "nav_open" : ""}>
+    <header className="navbar_container">
+      <a className="navbar_brand" href="#" onClick={() => setIsMenuOpen(false)}>
+        MatMar Portfolio
+      </a>
+      <nav className={isMenuOpen ? "nav_open" : ""} aria-label="Primary">
+        <a href="#experience" onClick={() => setIsMenuOpen(false)}>
+          {t("experience")}
+        </a>
         <a href="#technologies" onClick={() => setIsMenuOpen(false)}>
           {t("technologies")}
         </a>
@@ -73,7 +81,7 @@ export const Navbar = () => {
         </a>
         <div className="language-select-container">
           <Select
-            defaultValue={languageOptions.find(
+            value={languageOptions.find(
               (option) => option.value === i18n.language
             )}
             onChange={handleLanguageChange}
@@ -82,6 +90,7 @@ export const Navbar = () => {
             className="language-select"
             classNamePrefix="react-select"
             isSearchable={false}
+            aria-label="Language"
           />
         </div>
         <div className="theme-toggle-container-mobile">
@@ -91,6 +100,7 @@ export const Navbar = () => {
             className="theme-toggle-checkbox"
             checked={isDarkMode}
             onChange={handleThemeToggle}
+            aria-label="Toggle dark mode"
           />
           <label htmlFor="theme-toggle-mobile" className="theme-toggle-label">
             <span className="theme-toggle-ball"></span>
@@ -102,6 +112,7 @@ export const Navbar = () => {
           href="https://www.linkedin.com/in/mateusz-marek-679606236/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
           <i className="fab fa-linkedin"></i>
         </a>
@@ -109,6 +120,7 @@ export const Navbar = () => {
           href="https://github.com/MatMarrrrr"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub"
         >
           <i className="fab fa-github"></i>
         </a>
@@ -118,25 +130,29 @@ export const Navbar = () => {
         <input
           type="checkbox"
           id="theme-toggle"
-          className="theme-toggle-checkbox"
-          checked={isDarkMode}
-          onChange={handleThemeToggle}
-        />
-        <label htmlFor="theme-toggle" className="theme-toggle-label">
-          <span className="theme-toggle-ball"></span>
-        </label>
-      </div>
+        className="theme-toggle-checkbox"
+        checked={isDarkMode}
+        onChange={handleThemeToggle}
+        aria-label="Toggle dark mode"
+      />
+      <label htmlFor="theme-toggle" className="theme-toggle-label">
+        <span className="theme-toggle-ball"></span>
+      </label>
+    </div>
 
-      <div
+      <button
+        type="button"
         className="burger-menu-container"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle navigation"
+        aria-expanded={isMenuOpen}
       >
         <div className={isMenuOpen ? "burger-menu open" : "burger-menu"}>
           <div></div>
           <div></div>
           <div></div>
         </div>
-      </div>
-    </div>
+      </button>
+    </header>
   );
 };
